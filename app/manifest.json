@@ -21,12 +21,15 @@
       "scripts/chromereload.js",
       "scripts/background.js"
     ],
+    "persistent": false
   },
   "content_scripts": [
     {
       "matches": [
+        "https://www.showroom-live.com/*"
       ],
       "js": [
+        "bower_components/hls.js/dist/hls.js",
         "scripts/contentscript.js"
       ],
       "run_at": "document_end",
@@ -39,5 +42,6 @@
   },
   "permissions": [
     "tabs",
+    "https://www.showroom-live.com/*"
   ]
 }
